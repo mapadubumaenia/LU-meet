@@ -95,11 +95,15 @@ java -jar build/libs/project.jar
 3️⃣ Access
 http://localhost:8080
 
+
+---
 ##🧩 ERD 및 API 명세
 
-ERD 문서 보기
+### ERD 문서 보기
 
-API 명세서(Swagger)
+### API 명세서(Swagger)
 
-👥 팀 소개
+
+---
+## 👥 팀 소개
 
