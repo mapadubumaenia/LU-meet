@@ -80,21 +80,6 @@ Lumeat (루밋) : Luminous + Eat, 빛나는 한 끼
 | 검색 페이지 | 통합검색 / 정렬 탭 | ![](./docs/search.PNG) |
 | 관리자 페이지 | 통계, 신고 관리 | ![](./docs/admin.PNG) |
 
----
-
-## 💻 설치 및 실행
-
-### 1️⃣ Clone Repository
-```bash
-git clone https://github.com/yourname/project.git
-cd project
-
-# 2️⃣ Build & Run
-./gradlew build
-java -jar build/libs/project.jar
-
-# 3️⃣ Access
-http://localhost:8080
 
 
 
