@@ -1,0 +1,148 @@
+/* 10) 알림(Notif) 컴포넌트 */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.notif-wrap {
+    position: relative;
+}
+
+.btn {background: var(--brand);}
+.btn:hover {background: var(--btn);}
+
+.notif-btn {
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    cursor: pointer;
+    background: var(--card);
+    border: 1px solid var(--card);
+    box-shadow: var(--shadow);
+    position: relative;
+    color:var(--wtext);
+}
+.notif-btn:hover {
+    background: var(--card);
+}
+
+/* 빨간 dot */
+.notif-dot {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--danger);
+    box-shadow: 0 0 0 2px #fff;
+    display: none;
+}
+.notif-btn.has-new .notif-dot {
+    display: block;
+}
+
+/* 드롭다운 패널 */
+.notif-panel {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: min(420px, 92vw);
+    color: var(--text);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 8px;
+    z-index: 1000;
+    display: none;
+}
+.notif-panel.open {
+    display: block;
+}
+
+/* 헤더 & 푸터 */
+.notif-head,
+.notif-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--border);
+}
+.notif-foot {
+    border-bottom: none;
+    border-top: 1px solid var(--border);
+}
+
+/* 목록 */
+.notif-list {
+    display: grid;
+    gap: 8px;
+    max-height: 360px;
+    overflow: auto;
+    padding: 8px 0;
+}
+.notif-empty {
+    color: var(--muted);
+    text-align: center;
+    padding: 12px 0;
+}
+
+/* 아이템 */
+.notif-item {
+    display: grid;
+    grid-template-columns: 32px 1fr auto;
+    gap: 8px;
+    align-items: center;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 8px;
+    cursor: pointer;
+}
+.notif-item.unread {
+    background: rgba(96, 165, 250, 0.08);
+    border-color: var(--brand);
+}
+.notif-item.read {
+    opacity: 0.85;
+    background: var(--card);
+    border-color: var(--border);
+}
+
+.notif-item .ic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--tag);
+    font-size: 18px;
+    color: var(--brand);
+}
+.notif-item .msg {
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+}
+.notif-item .time {
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.notif-item button {
+    padding: 4px 8px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--btn);
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+.notif-item button:hover {
+    background: var(--brand);
+    color: var(--wtext);
+}

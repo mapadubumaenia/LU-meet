@@ -1,0 +1,211 @@
+/* 헤더 */
+.search-bar{display:none;}
+.search-btn{padding:10px 12px;border:none;border-radius:12px;
+  background:var(--brand);color:var(--wtext);cursor:pointer;font-weight: 700; font-size: 14px;}
+.search-btn:hover{background: var(--muted);}
+
+/* 트렌딩/태그/피드 전용 */
+.trend-grid{display:grid;grid-auto-flow:column;grid-auto-columns:80%;gap:12px;
+  overflow-x:auto;padding:4px 2px 8px;margin-bottom:8px}
+.trend-card{display:flex;flex-direction:column;gap:8px}
+.trend-title{font-weight:800;font-size:1rem}
+.trend-desc{color:var(--muted);font-size:.9rem}
+.actions{display:flex;gap:12px;font-size:.9rem;color:var(--muted);justify-content: space-between;}
+.populartag{margin-top:32px; background: var(--bg)}
+.tags{display:grid;gap:8px}
+.tag-item{display:flex;justify-content:space-between;align-items:center;
+  border-bottom:1px dashed var(--line);padding:6px 10px}
+.tag-item span {padding:6px 10px; border-radius: 6px; background: var(--tagchip); font-weight:600;color: var(--wtext)}
+.chip{font-weight:600; padding:6px 10px;border-radius:6px;font-size:.85rem; color: var(--wtext)}
+.tag-bar {display: flex; justify-content: space-between; background: var(--bg); width: 100%; padding:6px 6px;border-radius:6px; }
+
+/* 사이드 특징 배너 */
+.feature{display:flex;flex-direction:column;gap:10px}
+.feature .thumb{aspect-ratio:16/9}
+
+/* 커뮤니티 피드 카드 */
+.post{display:flex;flex-direction:column;gap:10px;margin-bottom: 8px;}
+.post-head{display:flex;flex-direction: row; align-items:center;gap:10px}
+.post-info{flex:1;}
+.post-id{font-weight: 700;}
+.followbtn-sm {justify-items: flex-end;}
+.followbtn-sm[aria-busy="true"]{opacity: .6; pointer-events:none;}
+.followbtn-sm.is-active{background: var(--brand); color:var(--wtext);border-color: var(--brand); border: 1px solid var(--brand);}
+.post-cta{display:flex;gap:14px}
+
+.like.active {color:var(--like); font-weight: bold;}
+
+/* 커뮤니티 피드 카드 */
+.post{display:flex;flex-direction:column;gap:10px;margin-bottom: 8px;}
+.post-head{display:flex;flex-direction: row; justify-content: flex-start; align-items:center;gap:10px}
+.leftBox{flex:1;}
+.post-id{font-weight: 700;}
+.post-cta{display:flex;gap:14px}
+
+/* 댓글 박스 */
+.cmt-box{margin-top:10px;border:1px solid var(--border);border-radius:12px;background:var(--card)}
+.cmt-head{display:flex;justify-content:space-between;align-items:center;
+  padding:8px 10px;border-bottom:1px solid var(--border)}
+.cmt-list{display:grid;gap:10px;padding:10px;max-height:320px;overflow:auto}
+.cmt{display:grid;grid-template-columns:40px 1fr;gap:8px}
+/* ===== Avatar (원형 프로필) 공통 ===== */
+.avatar-ss{
+  width: 36px;                  /* 기본 크기 */
+  height: 36px;
+  border-radius: 50%;           /* 원형 */
+  overflow: hidden;             /* 프레임 밖 잘라내기 */
+  background: var(--tag);       /* 이미지 없을 때 배경색 */
+  flex: 0 0 36px;               /* 레이아웃 흔들림 방지 */
+  border: 1px solid rgba(0,0,0,.06); /* (선택) 얇은 테두리 */
+}
+.avatar-ss > img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;            /* 중앙 기준 꽉 채우기 */
+}
+
+
+
+/* 댓글에서 쓰는 큰 아바타는 기존 크기 유지 */
+.cmt .avatar-ss{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.cmt .meta{color:var(--muted);font-size:.85rem}
+.cmt-input{display:flex;gap:8px;padding:10px;border-top:1px solid var(--border)}
+.cmt-input textarea{flex:1;border:1px solid var(--border);border-radius:8px;
+  padding:8px;min-height:52px;resize:vertical;background:var(--card);color:var(--text)}
+.cmt-empty{padding:14px;color:var(--muted);text-align:center}
+.cmt-loading{padding:14px;text-align:center}
+
+/* 하단 플로팅/검색바(PC만 노출) */
+.search{flex:1;border:1px solid var(--border);border-radius:12px;padding:6px;outline:none;width:100%}
+.btab{padding:7px 12px;border-radius:12px;background:var(--card); border:1px solid var(--brand); font-size: 14px; font-weight:600;}
+.btab:hover{background: var(--brand); border:1px solid var(--brand); color: var(--wtext);}
+.btab.is-active{background:var(--brand);color:var(--wtext);}
+.btab.is-active:hover{background: var(--muted);}
+
+.js-like.is-liked { color: var(--like); font-weight: 700; }
+
+/* 반응형 */
+@media (min-width:768px){
+  .btn{padding:12px;border-radius:12px;border:1px solid var(--brand);
+    font-weight:700;background:var(--card)}
+  .btn.primary{background:var(--brand);color:var(--wtext)}
+}
+@media (min-width:1024px){
+  .register{display:none}
+  .btn.pc-register{background:var(--muted);color:var(--wtext)}
+  .page-title{margin-bottom:8px}
+  .layout{display:grid;grid-template-columns:1fr 320px;gap:18px}
+  .sidebar{position:sticky;top:16px;align-self:start;height:max-content}
+  .search-bar{display:flex;gap:8px}
+  .search-input{flex:1;border:1px solid var(--border);border-radius:12px;
+    padding:10px 12px;background:var(--card)}
+}
+
+/* 모바일(<=768px)에서 하단 Profile 버튼 숨기고, 검색창 공간 확장 */
+@media (max-width: 768px) {
+  footer .tabs .btab:first-child { /* Profile */
+    display: none;
+  }
+
+  footer .authbar {
+    display: flex;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  footer .authbar .search {
+    flex: 1;
+    min-width: 0;      /* overflow 방지 */
+    padding: 10px 12px;
+    font-size: 16px;   /* 터치 키보드 최적화 */
+  }
+
+  footer .authbar .search-btn {
+    padding: 10px 14px;
+  }
+}
+
+/* 기본: 헤더 로그인 버튼 숨김 (데스크톱) */
+.login-top {
+  display: none;
+}
+
+/* 모바일(≤768px)에서만 보이게 */
+@media (max-width: 768px) {
+  .login-top {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    padding: 8px 10px;
+    border-radius: 10px;
+  }
+}
+
+/* ============================
+   좋아요 버튼 디자인만 상세와 동일 (JS/HTML 수정 없음)
+   대상: ForYou/Trending 등 .js-like 버튼
+   ============================ */
+
+/* 버튼 베이스: 이모지 텍스트가 차지하는 공간=0, 우리 하트/숫자만 보이게 */
+.post-cta .js-like,
+.actions .js-like {
+  border: 0;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;          /* 하트-숫자 간격 */
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  font-size: 0;      /* ← 핵심: 기존 이모지(텍스트) 폭을 0으로 */
+  line-height: 1;
+}
+
+/* 숫자는 보기 좋은 크기로 복구(부모가 0이라 rem로 지정) */
+.post-cta .js-like .like-count,
+.post-cta .js-like .cnt,
+.actions .js-like .like-count,
+.actions .js-like .cnt {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+/* 기본(미선택): 회색 빈 하트 */
+.post-cta .js-like::before,
+.actions .js-like::before {
+  content: "♡";
+  color: #aaa;
+  font-size: 1.1rem;         /* rem로 직접 지정 (부모 0 영향 X) */
+  transform: translateY(-1px);
+  display: inline-block;
+  transition: transform 120ms ease, color 120ms ease;
+}
+
+/* 활성(좋아요) 상태: 빨간 꽉찬 하트 + 살짝 팝 */
+.post-cta .js-like.is-liked::before,
+.post-cta .js-like[aria-pressed="true"]::before,
+.actions .js-like.is-liked::before,
+.actions .js-like[aria-pressed="true"]::before {
+  content: "♥";
+  color: var(--like, var(--accent, darkred));
+  transform: translateY(-1px) scale(1.1);
+}
+
+/* 접근성: 모션 최소화 시 트랜지션 제거 */
+@media (prefers-reduced-motion: reduce) {
+  .post-cta .js-like::before,
+  .actions .js-like::before { transition: none; }
+}
+
+/* 비활성 시 */
+.post-cta .js-like[disabled],
+.actions .js-like[disabled] {
+  opacity: .6;
+  pointer-events: none;
+}
