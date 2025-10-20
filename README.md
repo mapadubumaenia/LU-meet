@@ -91,6 +91,7 @@ Lumeat (루밋) : Luminous + Eat, 빛나는 한 끼
 ---
 ### ERD 문서 보기
 
+https://www.erdcloud.com/d/CGtQFzPZjTByjmQd7
 
 
 ---
@@ -100,4 +101,4 @@ Lumeat (루밋) : Luminous + Eat, 빛나는 한 끼
 
 ---
 ## 👥 팀 소개
-
+ ![](./docs/team.png) |
