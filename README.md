@@ -68,3 +68,38 @@ Lumeat (루밋) : Luminous + Eat, 빛나는 한 끼
 ## 🏗️ 시스템 구조
 (아래 다이어그램은 `/docs/system-architecture.png` 참조)
 
+
+
+
+## 🖼️ 화면 구성
+| 페이지 | 설명 | 예시 |
+|---------|------|------|
+| 메인 피드 | 트렌딩 & 추천 게시물 | ![](./docs/feed.png) |
+| 검색 페이지 | 통합검색 / 정렬 탭 | ![](./docs/search.png) |
+| 관리자 페이지 | 통계, 신고 관리 | ![](./docs/admin.png) |
+
+---
+
+## 💻 설치 및 실행
+
+### 1️⃣ Clone Repository
+```bash
+git clone https://github.com/yourname/project.git
+cd project
+
+
+2️⃣ Build & Run
+./gradlew build
+java -jar build/libs/project.jar
+
+3️⃣ Access
+http://localhost:8080
+
+##🧩 ERD 및 API 명세
+
+ERD 문서 보기
+
+API 명세서(Swagger)
+
+👥 팀 소개
+
