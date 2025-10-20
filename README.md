@@ -89,13 +89,14 @@ Lumeat (루밋) : Luminous + Eat, 빛나는 한 끼
 git clone https://github.com/yourname/project.git
 cd project
 
-
-2️⃣ Build & Run
+# 2️⃣ Build & Run
 ./gradlew build
 java -jar build/libs/project.jar
 
-3️⃣ Access
+# 3️⃣ Access
 http://localhost:8080
+
+
 
 
 ---
