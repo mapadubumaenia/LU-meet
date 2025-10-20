@@ -66,7 +66,9 @@ Lumeat (루밋) : Luminous + Eat, 빛나는 한 끼
 ---
 
 ## 🏗️ 시스템 구조
-(아래 다이어그램은 `/docs/system-architecture.pdf` 참조)
+
+
+| 시스템구성도 | ![](./docs/system-architecture.pdf) |
 
 
 
