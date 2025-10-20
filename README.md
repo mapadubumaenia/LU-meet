@@ -85,9 +85,15 @@ Lumeat (루밋) : Luminous + Eat, 빛나는 한 끼
 
 
 ---
-##🧩 ERD 및 API 명세
 
+## 🧩 ERD 및 API 명세
+
+---
 ### ERD 문서 보기
+
+
+
+---
 
 ### API 명세서(Swagger)
 
