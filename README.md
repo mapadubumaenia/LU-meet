@@ -94,11 +94,10 @@
 https://www.erdcloud.com/d/CGtQFzPZjTByjmQd7
 
 
----
 
-### API 명세서(Swagger)
+
 
 
 ---
 ## 👥 팀 소개
- ![](./docs/team.png) |
+ ![](./docs/team.png) 
